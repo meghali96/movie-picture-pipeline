@@ -1,18 +1,18 @@
-FROM python:3.10-slim-bullseye
+FROM python:3.10-slim
 
 ENV FLASK_RUN_HOST=0.0.0.0
+ENV CFLAGS="-Wno-error=incompatible-pointer-types -Wno-error=implicit-function-declaration"
 
 WORKDIR /
 
 RUN useradd -u 1000 -m app
 RUN apt-get update && \
-  apt-get install -y \
-  libpcre3 \
-  libpcre3-dev \
+  apt-get install -y --no-install-recommends \
   build-essential \
   gcc \
   openssl \
   libffi-dev \
+  && rm -rf /var/lib/apt/lists/* \
   && pip install pipenv
 
 RUN mkdir -p /var/www/app && mkdir /app
