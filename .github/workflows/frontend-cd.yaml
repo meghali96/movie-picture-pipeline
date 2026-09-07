@@ -11,7 +11,7 @@ name: Frontend Continuous Deployment
 env:
   AWS_REGION: us-east-1
   EKS_CLUSTER_NAME: cluster
-  REACT_APP_MOVIE_API_URL: ${{ vars.REACT_APP_MOVIE_API_URL || secrets.REACT_APP_MOVIE_API_URL || 'http://localhost:5000' }}
+  REACT_APP_MOVIE_API_URL: ${{ vars.REACT_APP_MOVIE_API_URL || secrets.REACT_APP_MOVIE_API_URL || 'http://af0479d6e4a28483c8ef2dadbefca9c6-2062840659.us-east-1.elb.amazonaws.com' }}
 
 jobs:
   lint:
