@@ -71,6 +71,15 @@ The following execution logs confirm that the entire deployment was performed di
 
 ![Backend CD](screenshots/backend-cd-pipeline.png)
 
+#### Proof of Automated Deployment via GitHub Actions (Zero Manual Intervention)
+The following execution logs confirm that the backend deployment was performed directly and automatically by GitHub Actions without manual intervention:
+
+1. **Build & Push to ECR Step**:
+![Backend Build and Push Logs](screenshots/backend-cd-build-and-push-logs.png)
+
+2. **Deploy to EKS Step (Kustomize & kubectl)**:
+![Backend Deploy to EKS Logs](screenshots/backend-cd-deploy-to-eks-logs.png)
+
 ---
 
 ## 4. Standout Features Implemented
