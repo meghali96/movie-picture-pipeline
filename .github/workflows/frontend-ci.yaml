@@ -91,6 +91,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run tests
+        run: CI=true npm test
+
       - name: Build application
         run: CI=false npm run build
 
