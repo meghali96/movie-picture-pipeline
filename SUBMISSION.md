@@ -55,6 +55,15 @@ All CI and CD workflows for both Frontend and Backend applications run cleanly w
 
 ![Frontend CD](screenshots/frontend-cd-pipeline.png)
 
+#### Proof of Automated Deployment via GitHub Actions (Zero Manual Intervention)
+The following execution logs confirm that the entire deployment was performed directly and automatically by GitHub Actions without any manual intervention:
+
+1. **Build & Push to ECR Step**:
+![Build and Push Logs](screenshots/frontend-cd-build-and-push-logs.png)
+
+2. **Deploy to EKS Step (Kustomize & kubectl)**:
+![Deploy to EKS Logs](screenshots/frontend-cd-deploy-to-eks-logs.png)
+
 ---
 
 ### Backend Continuous Deployment (`backend-cd.yaml`)
