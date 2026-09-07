@@ -147,3 +147,6 @@ jobs:
           cd starter/frontend/k8s
           kustomize edit set image frontend=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           kustomize build | kubectl apply -f -
+          kubectl rollout status deployment/frontend --timeout=120s
+          kubectl get pods -l app=frontend -o wide
+          kubectl get services frontend
